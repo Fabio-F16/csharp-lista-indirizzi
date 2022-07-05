@@ -9,7 +9,7 @@
             StreamReader indirizzi = File.OpenText("C:\\Users\\Fabioz\\Desktop\\Net\\csharp-lista-indirizzi\\addresses.csv");
 
             string intestazione = indirizzi.ReadLine();
-            Console.WriteLine(intestazione);
+            //Console.WriteLine(intestazione);
 
             List<Indirizzo> listaIndirizzi = new List<Indirizzo>();
             List<string> listaIndirizziSbagliati = new List<string>();
@@ -37,23 +37,25 @@
                     Indirizzo indirizzo = new Indirizzo(nome, cognome, via, città, provincia, cap);
                     listaIndirizzi.Add(indirizzo);
 
-                    foreach (Indirizzo indirizzoz in listaIndirizzi)
-                    {
-                       Console.Write("Nome: " + indirizzoz.Nome + " --- ");
-                       Console.Write("Cognome: " + indirizzoz.Cognome + " --- ");
-                       Console.Write("Via: " + indirizzoz.Via + " --- ");
-                       Console.Write("Città: " + indirizzoz.Citta + " --- ");
-                       Console.Write("Provincia: " + indirizzoz.Provincia + " --- ");
-                       Console.Write("Cap: " + indirizzoz.Cap + " --- ");
-                       Console.WriteLine("******************");
-                       Console.WriteLine();
-                    }
+                   
                                     
                 }
                 catch (IndexOutOfRangeException e)
                 {
                     listaIndirizziSbagliati.Add(linea);
                 }
+
+            }
+            foreach (Indirizzo indirizzoz in listaIndirizzi)
+            {
+                Console.Write("Nome: " + indirizzoz.Nome + " --- ");
+                Console.Write("Cognome: " + indirizzoz.Cognome + " --- ");
+                Console.Write("Via: " + indirizzoz.Via + " --- ");
+                Console.Write("Città: " + indirizzoz.Citta + " --- ");
+                Console.Write("Provincia: " + indirizzoz.Provincia + " --- ");
+                Console.Write("Cap: " + indirizzoz.Cap + " --- ");
+                Console.WriteLine("\n*************************************");
+                Console.WriteLine();
             }
             indirizzi.Close();
         }
