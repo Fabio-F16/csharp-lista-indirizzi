@@ -26,7 +26,16 @@
                 //}
                 try
                 {
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        //Console.Write(data[i]);
+                        if (data[i] == "")
+                        {
+                            data[i] = "null";
+                        }
 
+
+                    }
                     string nome = data[0];
                     string cognome = data[1];
                     string via = data[2];
@@ -35,25 +44,23 @@
                     string cap = data[5];
 
                     Indirizzo indirizzo = new Indirizzo(nome, cognome, via, città, provincia, cap);
-                    listaIndirizzi.Add(indirizzo);
-
-                   
-                                    
+                    listaIndirizzi.Add(indirizzo);              
                 }
                 catch (IndexOutOfRangeException e)
                 {
-                    listaIndirizziSbagliati.Add(linea);
+                   // listaIndirizziSbagliati.Add(linea);
+                   Console.WriteLine(e.Message);
                 }
 
             }
             foreach (Indirizzo indirizzoz in listaIndirizzi)
             {
-                Console.Write("Nome: " + indirizzoz.Nome + " --- ");
-                Console.Write("Cognome: " + indirizzoz.Cognome + " --- ");
-                Console.Write("Via: " + indirizzoz.Via + " --- ");
-                Console.Write("Città: " + indirizzoz.Citta + " --- ");
-                Console.Write("Provincia: " + indirizzoz.Provincia + " --- ");
-                Console.Write("Cap: " + indirizzoz.Cap + " --- ");
+                Console.Write("Nome: " + indirizzoz.Nome + " // ");
+                Console.Write("Cognome: " + indirizzoz.Cognome + " // ");
+                Console.Write("Via: " + indirizzoz.Via + " // ");
+                Console.Write("Città: " + indirizzoz.Citta + " // ");
+                Console.Write("Provincia: " + indirizzoz.Provincia + " // ");
+                Console.Write("Cap: " + indirizzoz.Cap + " // ");
                 Console.WriteLine("\n*************************************");
                 Console.WriteLine();
             }
