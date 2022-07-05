@@ -25,18 +25,5 @@ namespace csharp_lista_indirizzi
             Cap = cap;
         }
 
-        //public string Stampa()
-        //{
-        //    string stringa = "******indirizzo******\n";
-        //    stringa += "Nome:\t" + this.Nome + "\n";
-        //    stringa += "Cognome:\t" + this.Cognome + "\n";
-        //    stringa += "Via:\t" + this.Via + "\n";
-        //    stringa += "Città:\t" + this.Citta + "\n";
-        //    stringa += "Provincia:\t" + this.Provincia + "\n";
-        //    stringa += "Cap:\t" + this.Cap + "\n";
-
-        //    return stringa;
-
-        //}
     }
 }
