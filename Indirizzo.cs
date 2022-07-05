@@ -8,12 +8,12 @@ namespace csharp_lista_indirizzi
 {
     internal class Indirizzo
     {
-        string Nome { get; set; }
-        string Cognome { get; set; }
-        string Via { get; set; }
-        string Citta { get; set; }
-        string Provincia { get; set; }
-        string Cap { get; set; }
+        public string Nome { get; set; }
+        public string Cognome { get; set; }
+        public string Via { get; set; }
+        public string Citta { get; set; }
+        public string Provincia { get; set; }
+        public string Cap { get; set; }
 
         public Indirizzo(string nome, string cognome, string via, string citta, string provincia, string cap)
         {
@@ -25,18 +25,18 @@ namespace csharp_lista_indirizzi
             Cap = cap;
         }
 
-        public string Stampa()
-        {
-            string stringa = "******indirizzo******\n";
-            stringa += "Nome:\t" + this.Nome + "\n";
-            stringa += "Cognome:\t" + this.Cognome + "\n";
-            stringa += "Via:\t" + this.Via + "\n";
-            stringa += "Città:\t" + this.Citta + "\n";
-            stringa += "Provincia:\t" + this.Provincia + "\n";
-            stringa += "Cap:\t" + this.Cap + "\n";
+        //public string Stampa()
+        //{
+        //    string stringa = "******indirizzo******\n";
+        //    stringa += "Nome:\t" + this.Nome + "\n";
+        //    stringa += "Cognome:\t" + this.Cognome + "\n";
+        //    stringa += "Via:\t" + this.Via + "\n";
+        //    stringa += "Città:\t" + this.Citta + "\n";
+        //    stringa += "Provincia:\t" + this.Provincia + "\n";
+        //    stringa += "Cap:\t" + this.Cap + "\n";
 
-            return stringa;
+        //    return stringa;
 
-        }
+        //}
     }
 }
